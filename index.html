@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The PHP Quality Assurance Toolchain" />
+  <meta name="author" content="Sebastian Bergmann" />
+  <meta property="og:email" content="sb@sebastian-bergmann.de" />
+  <meta property="og:site_name" content="The PHP Quality Assurance Toolchain" />
+  <meta property="og:title" content="The PHP Quality Assurance Toolchain" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://phpqatools.org/" />
+  <link rel="canonical" href="http://phpqatools.org/" />
+  <title>The PHP Quality Assurance Toolchain</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="css/webfonts.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+ </head>
+
+ <body>
+  <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+    <div class="container">
+     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </a>
+     <a class="brand" href="index.html">The PHP Quality Assurance Toolchain</a>
+    </div>
+   </div>
+  </div>
+
+  <div class="container">
+   <div class="row">
+    <div class="span4">
+     <h2>PHPUnit<sup>*</sup></h2>
+     <p><a href="http://www.phpunit.de/">PHPUnit</a> is the de-facto standard for <a href="http://en.wikipedia.org/wiki/Unit_testing">unit testing</a> in PHP projects. It provides both a framework that makes the writing of tests easy as well as the functionality to easily run the tests and analyse their results.</p>
+    </div>
+
+    <div class="span4">
+     <h2>PHP Copy/Paste Detector<sup>*</sup></h2>
+     <p><a href="http://github.com/sebastianbergmann/phpcpd">phpcpd</a> is a Copy/Paste Detector (CPD) for PHP code. It scans a PHP project for <a href="http://en.wikipedia.org/wiki/Duplicate_code">duplicated code</a>.</p>
+    </div>
+
+    <div class="span4">
+     <h2>PHPLOC<sup>*</sup></h2>
+     <p><a href="http://github.com/sebastianbergmann/phploc">phploc</a> is a tool for quickly measuring the size of a PHP project.</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="span4">
+     <h2>PHP_CodeSniffer<sup>*</sup></h2>
+     <p><a href="http://pear.php.net/PHP_CodeSniffer">phpcs</a> tokenises PHP, JavaScript and CSS files and detects violations of a defined set of coding standards. It is an essential development tool that ensures your code remains clean and consistent. It can also help prevent some common semantic errors made by developers.</p>
+    </div>
+
+    <div class="span4">
+     <h2>PHP_Depend<sup>*</sup></h2>
+     <p><a href="http://pdepend.org/">pdepend</a> can generate a large set of <a href="http://en.wikipedia.org/wiki/Software_metric">software metrics</a> from a given code base. These values can be used to measure the quality of a software project and they help to identify the parts of an application where a <a href="http://en.wikipedia.org/wiki/Code_refactoring">code refactoring</a> should be applied.</p>
+    </div>
+
+    <div class="span4">
+     <h2>PHP Mess Detector<sup>*</sup></h2>
+     <p><a href="http://phpmd.org/">phpmd</a> scans PHP source code and looks for potential problems such as possible bugs, dead code, suboptimal code, and overcomplicated expressions</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="span4">
+     <h2>bytekit-cli</h2>
+     <p><a href="http://github.com/sebastianbergmann/bytekit-cli">bytekit-cli</a> provides a command-line tool that leverages the Bytekit extension to perform common code analysis tasks on the PHP bytecode level.</p>
+    </div>
+
+    <div class="span4">
+     <h2>PHP_CodeBrowser<sup>*</sup></h2>
+     <p><a href="http://github.com/Mayflower/PHP_CodeBrowser">PHP_CodeBrowser</a> provides a code browser for PHP files with syntax highlighting and colored error-sections found by quality assurance tools such as PHPUnit and PHP_CodeSniffer.</p>
+    </div>
+
+    <div class="span4">
+     <h2>Jenkins PHP</h2>
+     <p><a href="http://jenkins-ci.org/">Jenkins</a> is the leading open-source <a href="http://martinfowler.com/articles/continuousIntegration.html">continuous integration</a> server. Thanks to its thriving plugin ecosystem, it supports building and testing virtually any project. The goal of the <a href="http://jenkins-php.org/">Template for Jenkins Jobs for PHP Projects</a> is to provide a standard template for Jenkins jobs for PHP projects.</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="span12">
+     <h2>Installation</h2>
+     <p>The PHP Quality Assurance Toolchain should be installed using the PEAR Installer, the backbone of the <a href="http://pear.php.net/">PHP Extension and Application Repository</a> that provides a distribution system for PHP packages.</p>
+     <p>Depending on your OS distribution and/or your PHP environment, you may need to install PEAR or update your existing PEAR installation before you can proceed with the following instructions.</p>
+     <p><code>sudo pear upgrade PEAR</code> usually suffices to upgrade an existing PEAR installation. The <a href="http://pear.php.net/manual/en/installation.getting.php">PEAR Manual</a> explains how to perform a fresh installation of PEAR.</p>
+     <p>The following two commands (which you may have to run as <code>root</code>) are all that is required to install all the tools listed above that are marked with a <emph>*</emph> using the PEAR Installer:</p>
+     <pre>pear config-set auto_discover 1
+pear install pear.phpqatools.org/phpqatools</pre>
+    </div>
+   </div>
+
+   <hr>
+
+   <footer>
+    <p>The <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><a xmlns:cc="http://creativecommons.org/ns#" href="http://phpqatools.org/" property="cc:attributionName" rel="cc:attributionURL">content of this website</a></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+   </footer>
+  </div>
+
+  <script src="js/bootstrap.min.js"></script>
+ </body>
+</html>
