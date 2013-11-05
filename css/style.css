@@ -1,8 +1,13 @@
+body, h1, h2, h3, h4, h5, h6 {
+ font-family: 'Open Sans', sans-serif;
+}
+
 body {
- padding-bottom: 40px;
- padding-top: 60px;
+ font-size: 1.6em;
+ line-height: 1.6;
 }
 
 code, pre {
- font-family: 'Droid Sans Mono', monospace;
+ font-family: 'Source Code Pro', sans-serif;
+ font-size: 1em;
 }
